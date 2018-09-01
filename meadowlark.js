@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 var fortune = require('./lib/fortune.js');
 
 var express = require('express');
@@ -24,6 +24,14 @@ app.get('/', function(req, res){
 
 app.get('/about', function(req, res){
   res.render('about', { pageTestScript: '/qa/tests-about.js' });
+});
+
+app.get('/tours/hood-river', function(req, res){
+  res.render('tours/hood-river');
+});
+
+app.get('/tours/request-group-rate', function(req, res){
+  res.render('tours/request-group-rate');
 });
 
 app.use(function(req, res){
